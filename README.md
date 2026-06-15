@@ -1,98 +1,108 @@
-# Skills Pessoais — Danyel Soares
+# Skills Pessoais — Claude Code & IDEs
 
-Coleção de skills customizadas para o Claude Code, organizadas por categoria.
+> **v4.0.0** — 35 skills em 6 categorias
 
-## Como instalar
+Repositório privado de skills para Claude Code, Cursor, Windsurf, Gemini CLI, Codex e Antigravity.
 
-Clone o repositório e copie as skills para sua pasta `.claude/skills`:
+---
+
+## Instalação rápida
 
 ```bash
-git clone https://github.com/DanyelSoares/skills-pessoais.git
-cp -r skills-pessoais/*/  ~/.claude/skills/
+# Clonar em qualquer máquina
+git clone https://github.com/SEU_USUARIO/skills-pessoais.git
+cd skills-pessoais
+
+# Instalar em todas as IDEs de uma vez
+bash instalar-skills.sh --tool all
+
+# Ou só no Claude Code
+bash instalar-skills.sh
 ```
 
-No Windows (PowerShell):
+## Atualizar (após mudanças no repo)
 
-```powershell
-git clone https://github.com/DanyelSoares/skills-pessoais.git
-Copy-Item -Recurse "skills-pessoais\*" "$env:USERPROFILE\.claude\skills\" -Force
+```bash
+git pull
+bash instalar-skills.sh --tool all
 ```
 
----
+## Verificar status
 
-## Skills disponíveis (35)
-
-### Design & Frontend
-| Skill | Descrição |
-|-------|-----------|
-| `animacoes-web` | Animações profissionais — scroll-triggered, hover, GSAP |
-| `componentes-ui` | Componentes UI de alta qualidade (heroes, cards, modals…) |
-| `design-anti-slop` | Audita e corrige design genérico de IA |
-| `frontend-design-oficial` | Interfaces frontend distintivas, qualidade de produção |
-| `identidade-visual` | Criação de identidade visual |
-| `recursos-frontend` | Recursos e referências para frontend |
-| `site-premium` | Sites premium completos |
-| `landing-page` | Landing pages de alta conversão |
-| `saas-dashboard` | Dashboards SaaS profissionais |
-
-### Desenvolvimento
-| Skill | Descrição |
-|-------|-----------|
-| `app-ambientes` | Simulação de ambientes e arquitetura via IA |
-| `app-mobile` | Apps mobile com React Native ou PWA |
-| `debugar` | Sessão estruturada de debug |
-| `documentar` | Documentação técnica — README, docstrings, runbook |
-| `env-secrets-manager` | Gerencia .env, detecta vazamento de credenciais |
-| `mercadopago` | Integração com MercadoPago |
-| `webapp-testing` | Testes de aplicações web |
-| `iniciar-projeto` | Inicializa novos projetos com estrutura organizada |
-
-### Conteúdo & Marketing
-| Skill | Descrição |
-|-------|-----------|
-| `conteudo-email` | Emails de marketing, newsletters, automações |
-| `conteudo-social` | Carrosséis, posts, scripts para redes sociais |
-| `seo-basico` | SEO básico para sites e páginas |
-| `trafego-pago-meta` | Campanhas de tráfego pago no Meta Ads |
-
-### Produtividade & Workflow
-| Skill | Descrição |
-|-------|-----------|
-| `changelog-generator` | Gera changelog legível a partir de commits |
-| `commitar` | Commita com mensagens padronizadas |
-| `deploy-web` | Deploy de aplicações web |
-| `pr-review-expert` | Revisão expert de Pull Requests |
-| `revisar-diff` | Revisão de diffs de código |
-| `workflow-visualizer` | Visualização de workflows e fluxos |
-| `obsidian-pkm` | Integração com Obsidian para gestão de conhecimento |
-
-### Integrações
-| Skill | Descrição |
-|-------|-----------|
-| `google-calendar` | Integra Google Calendar em aplicações |
-| `google-drive` | Integra Google Drive em aplicações |
-
-### Claude Code & Skills
-| Skill | Descrição |
-|-------|-----------|
-| `claude-design` | Prototipagem visual com Claude Design |
-| `skill-creator` | Criação de novas skills |
-| `meu-perfil` | Perfil e preferências pessoais |
-| `doe-framework` | Framework DOE |
-| `doe-executar` | Execução do framework DOE |
-
----
-
-## Uso
-
-Após instalar, use no Claude Code com `/nome-da-skill`. Exemplo:
-
-```
-/landing-page
-/debugar
-/componentes-ui
+```bash
+bash instalar-skills.sh --list
+bash instalar-skills.sh --version
 ```
 
 ---
 
-*Última atualização: Junho 2026*
+## Categorias
+
+| Categoria | Skills | Descrição |
+|---|---|---|
+| **Contexto** | 3 | Background — Claude carrega automaticamente |
+| **Dev** | 11 | Fluxo de desenvolvimento, Git, debug, DOE |
+| **Web** | 12 | Sites, design, frontend, mobile, deploy |
+| **Conteúdo** | 3 | Social media, email, visualização |
+| **Negócio** | 3 | Tráfego pago, Obsidian, app de ambientes |
+| **Integrações** | 3 | Mercado Pago, Google Calendar, Google Drive |
+
+---
+
+## Ferramentas suportadas
+
+```bash
+bash instalar-skills.sh --tool claude      # ~/.claude/skills/
+bash instalar-skills.sh --tool cursor      # ~/.cursor/rules/
+bash instalar-skills.sh --tool windsurf    # ~/.windsurf/skills/
+bash instalar-skills.sh --tool gemini      # ~/.gemini/skills/
+bash instalar-skills.sh --tool codex       # ~/.codex/skills/
+bash instalar-skills.sh --tool antigravity # ~/.gemini/antigravity/skills/
+bash instalar-skills.sh --tool all         # todas de uma vez
+```
+
+---
+
+## Adicionar skill nova
+
+```bash
+# 1. Criar pasta e arquivo
+mkdir nova-skill
+# Editar nova-skill/SKILL.md
+
+# 2. Adicionar ao array SKILLS no instalar-skills.sh
+
+# 3. Atualizar versão
+echo "4.1.0" > .version
+
+# 4. Commitar e sincronizar
+git add .
+git commit -m "feat(skills): adiciona nova-skill"
+git push
+
+# 5. Em qualquer máquina: git pull && bash instalar-skills.sh --tool all
+```
+
+---
+
+## Estrutura
+
+```
+skills-pessoais/
+├── README.md
+├── ATUALIZANDO.md       ← guia de atualização detalhado
+├── instalar-skills.sh   ← instalador multi-ferramenta
+├── .version             ← versão atual (ex: 4.0.0)
+├── .gitignore
+├── [nome-da-skill]/
+│   └── SKILL.md         ← instrução da skill
+└── ...
+```
+
+---
+
+## Notas de segurança
+
+- Repositório **privado** — nunca tornar público
+- Nunca commitar `.env`, credenciais ou tokens
+- Skills com integração de API usam variáveis de ambiente, não valores hardcoded

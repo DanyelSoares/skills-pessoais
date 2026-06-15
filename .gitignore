@@ -1,0 +1,22 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs e temporários
+*.log
+*.tmp
+.tmp/
+
+# Segredos — nunca commitar
+.env
+*.key
+*.pem
+credentials.json
+token.json
