@@ -129,7 +129,11 @@ instalar_para_ferramenta() {
   [ "$tool" != "cursor" ] && mkdir -p "$dir"
   local ok=0 fail=0
   for skill in "${SKILLS[@]}"; do
-    instalar_skill "$skill" "$dir" "$tool" && ((ok++)) || ((fail++))
+    if instalar_skill "$skill" "$dir" "$tool"; then
+      ok=$((ok+1))
+    else
+      fail=$((fail+1))
+    fi
   done
   echo ""; echo "   ✓ $ok instaladas  ⚠ $fail puladas"; echo ""
   case "$tool" in
