@@ -1,0 +1,19 @@
+{
+  "name": "mcp-google-ads-pessoal",
+  "version": "1.0.0",
+  "description": "Conector MCP do Google Ads (leitura + criação de campanhas pausadas) para o Claude Code",
+  "type": "module",
+  "main": "server.mjs",
+  "bin": { "mcp-google-ads-pessoal": "server.mjs" },
+  "scripts": {
+    "start": "node server.mjs",
+    "autorizar": "node autorizar.mjs",
+    "testar": "node testar.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "zod": "^3.25.0"
+  },
+  "license": "MIT"
+}

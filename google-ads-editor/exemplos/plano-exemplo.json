@@ -1,0 +1,49 @@
+{
+  "campanhas": [
+    {
+      "nome": "Pesquisa | Energia Solar | Maceió",
+      "orcamento_diario": 30,
+      "lance": "maximizar_cliques",
+      "idiomas": ["pt"],
+      "locais": ["Maceio, State of Alagoas, Brazil"],
+      "parceiros_pesquisa": false,
+      "negativas_campanha": ["grátis", "curso", {"texto": "emprego", "tipo": "ampla"}],
+      "chamadas": ["Visita técnica grátis", "Parcelamento em 60x", "Garantia de 25 anos"],
+      "grupos": [
+        {
+          "nome": "Energia solar residencial",
+          "cpc_max": 2.5,
+          "palavras": [
+            {"texto": "energia solar residencial", "tipo": "frase"},
+            {"texto": "placa solar maceió", "tipo": "exata"},
+            {"texto": "instalação painel solar", "tipo": "frase"}
+          ],
+          "negativas": ["usada"],
+          "anuncios": [
+            {
+              "titulos": [
+                {"texto": "Energia Solar em Maceió", "fixar": 1},
+                "Reduza sua Conta de Luz",
+                "Até 95% de Economia",
+                "Instalação em 30 Dias",
+                "Orçamento Sem Compromisso",
+                "Parcele em Até 60x",
+                "Garantia de 25 Anos",
+                "Visita Técnica Grátis",
+                "Empresa Local e Certificada",
+                "Simule Sua Economia Agora"
+              ],
+              "descricoes": [
+                "Projeto sob medida para sua casa. Peça seu orçamento e veja quanto vai economizar.",
+                "Equipe própria, homologação na concessionária e monitoramento pelo celular."
+              ],
+              "url_final": "https://www.exemplo.com.br/energia-solar",
+              "caminho1": "energia-solar",
+              "caminho2": "maceio"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
