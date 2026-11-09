@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # =============================================================================
-# instalar-skills.sh — Gerenciador de Skills Pessoais v4.2.0
-# 55 skills em 6 categorias
+# instalar-skills.sh — Gerenciador de Skills Pessoais v4.3.0
+# 61 skills em 6 categorias
 #
 # USO:
 #   bash instalar-skills.sh                    # Claude Code (padrão)
@@ -17,7 +17,7 @@
 
 set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-VERSION=$(cat "$SCRIPT_DIR/.version" 2>/dev/null || echo "4.2.0")
+VERSION=$(cat "$SCRIPT_DIR/.version" 2>/dev/null || echo "4.3.0")
 
 SKILLS_CONTEXTO=(
   "meu-perfil"
@@ -83,6 +83,12 @@ SKILLS_NEGOCIO=(
   "gestao-fornecedores"
   "analise-reunioes"
   "historias-usuario"
+  "cenarios-excel"
+  "sensibilidade-excel"
+  "precificacao-excel"
+  "unit-economics-excel"
+  "monte-carlo-excel"
+  "tir-retorno-excel"
 )
 
 SKILLS_INTEGRACOES=(
