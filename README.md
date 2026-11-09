@@ -1,6 +1,6 @@
 # Skills Pessoais — Claude Code & IDEs
 
-> **v4.0.0** — 35 skills em 6 categorias
+> **v4.2.0** — 55 skills em 6 categorias
 
 Repositório privado de skills para Claude Code, Cursor, Windsurf, Gemini CLI, Codex e Antigravity.
 
@@ -41,11 +41,11 @@ bash instalar-skills.sh --version
 | Categoria | Skills | Descrição |
 |---|---|---|
 | **Contexto** | 3 | Background — Claude carrega automaticamente |
-| **Dev** | 11 | Fluxo de desenvolvimento, Git, debug, DOE |
-| **Web** | 12 | Sites, design, frontend, mobile, deploy |
-| **Conteúdo** | 3 | Social media, email, visualização |
-| **Negócio** | 3 | Tráfego pago, Obsidian, app de ambientes |
-| **Integrações** | 3 | Mercado Pago, Google Calendar, Google Drive |
+| **Dev** | 17 | Fluxo de desenvolvimento, Git, debug, DOE, Postgres/Supabase, modelagem de banco, Claude API, GitHub Actions, checklist de deploy, auditoria de skills |
+| **Web** | 15 | Sites, design, frontend, mobile, deploy, wireframes, Figma→código, auditoria de UI |
+| **Conteúdo** | 4 | Social media, email, visualização, coautoria de documentos |
+| **Negócio** | 12 | Tráfego pago, Obsidian, app de ambientes, pitch deck, proposta de valor, personas, mapeamento de processos, POPs, gestão de projetos e fornecedores, reuniões, histórias de usuário |
+| **Integrações** | 4 | Mercado Pago, Google Calendar, Google Drive, NotebookLM |
 
 ---
 
@@ -106,3 +106,4 @@ skills-pessoais/
 - Repositório **privado** — nunca tornar público
 - Nunca commitar `.env`, credenciais ou tokens
 - Skills com integração de API usam variáveis de ambiente, não valores hardcoded
+- Antes de incluir skill de terceiros: `python3 auditoria-skills/scripts/skill_security_auditor.py <pasta-da-skill>`

@@ -20,3 +20,8 @@ desktop.ini
 *.pem
 credentials.json
 token.json
+
+# NotebookLM: sessão do Google e ambiente local
+notebooklm/data/
+notebooklm/.venv/
+__pycache__/
