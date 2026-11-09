@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # =============================================================================
-# instalar-skills.sh — Gerenciador de Skills Pessoais v4.0.0
-# 35 skills em 6 categorias
+# instalar-skills.sh — Gerenciador de Skills Pessoais v4.1.0
+# 46 skills em 6 categorias
 #
 # USO:
 #   bash instalar-skills.sh                    # Claude Code (padrão)
@@ -17,7 +17,7 @@
 
 set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-VERSION=$(cat "$SCRIPT_DIR/.version" 2>/dev/null || echo "4.0.0")
+VERSION=$(cat "$SCRIPT_DIR/.version" 2>/dev/null || echo "4.1.0")
 
 SKILLS_CONTEXTO=(
   "meu-perfil"
@@ -37,6 +37,9 @@ SKILLS_DEV=(
   "iniciar-projeto"
   "skill-creator"
   "doe-executar"
+  "github-actions-economia"
+  "supabase-postgres-best-practices"
+  "claude-api"
 )
 
 SKILLS_WEB=(
@@ -52,24 +55,32 @@ SKILLS_WEB=(
   "deploy-web"
   "app-mobile"
   "claude-design"
+  "fluxo-wireframe"
+  "figma-para-codigo"
+  "auditoria-ui"
 )
 
 SKILLS_CONTEUDO=(
   "conteudo-social"
   "conteudo-email"
   "workflow-visualizer"
+  "doc-coauthoring"
 )
 
 SKILLS_NEGOCIO=(
   "trafego-pago-meta"
   "obsidian-pkm"
   "app-ambientes"
+  "pitch-deck"
+  "proposta-valor-b2b"
+  "personas-b2b"
 )
 
 SKILLS_INTEGRACOES=(
   "mercadopago"
   "google-calendar"
   "google-drive"
+  "notebooklm"
 )
 
 SKILLS=(
