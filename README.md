@@ -1,6 +1,6 @@
 # Skills Pessoais — Claude Code & IDEs
 
-> **v4.4.0** — 63 skills em 6 categorias
+> **v4.5.0** — 64 skills em 6 categorias
 
 Repositório privado de skills para Claude Code, Cursor, Windsurf, Gemini CLI, Codex e Antigravity.
 
@@ -43,7 +43,7 @@ bash instalar-skills.sh --version
 | **Contexto** | 3 | Background — Claude carrega automaticamente |
 | **Dev** | 17 | Fluxo de desenvolvimento, Git, debug, DOE, Postgres/Supabase, modelagem de banco, Claude API, GitHub Actions, checklist de deploy, auditoria de skills |
 | **Web** | 15 | Sites, design, frontend, mobile, deploy, wireframes, Figma→código, auditoria de UI |
-| **Conteúdo** | 4 | Social media, email, visualização, coautoria de documentos |
+| **Conteúdo** | 5 | Social media, email, visualização, coautoria de documentos, imagens com Gemini |
 | **Negócio** | 20 | Tráfego pago, Obsidian, app de ambientes, pitch deck, proposta de valor, personas, mapeamento de processos, POPs, gestão de projetos e fornecedores, reuniões, histórias de usuário, planilhas Excel (cenários, sensibilidade, precificação, unit economics, Monte Carlo, TIR), Google Ads (Editor e publicação via API) |
 | **Integrações** | 4 | Mercado Pago, Google Calendar, Google Drive, NotebookLM |
 
