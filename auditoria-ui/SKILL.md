@@ -1,6 +1,6 @@
 ---
 name: auditoria-ui
-description: "Audits web UIs against heuristics for interaction, layout, typography, forms, and accessibility, returning prioritized, ready-to-apply fixes."
+description: "Audita interfaces web (interação, layout, tipografia, formulários e acessibilidade) e devolve correções priorizadas e prontas para aplicar. Use antes de publicar uma página ou após um redesign."
 ---
 
 This skill audits web UIs with a checklist modeled on Vercel's Web Interface Guidelines and turns every finding into a concrete fix.

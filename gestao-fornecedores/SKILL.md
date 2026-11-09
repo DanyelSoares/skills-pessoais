@@ -1,6 +1,6 @@
 ---
 name: gestao-fornecedores
-description: "Use when scoring or auditing vendors: scorecards, SLA compliance and service credits, third-party risk tier or a tier-1 vendor review. Runs vendor_scorer.py, sla_compliance_tracker.py and vendor_risk_classifier.py."
+description: "Avalia e audita fornecedores: scorecards, cumprimento de SLA e multas, nível de risco de terceiros e revisão de fornecedores críticos. Use ao comparar, pontuar ou acompanhar fornecedores e contratos de serviço."
 context: fork
 license: MIT
 metadata:

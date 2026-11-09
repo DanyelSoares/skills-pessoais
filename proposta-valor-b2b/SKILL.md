@@ -1,6 +1,6 @@
 ---
 name: proposta-valor-b2b
-description: "Maps product features to customer pain points and builds proof-backed B2B value propositions for websites, pitch decks, and sales."
+description: "Relaciona funcionalidades do produto às dores do cliente e cria propostas de valor B2B com provas, para site, pitch e vendas. Use ao escrever argumentos de valor por persona."
 ---
 
 This skill turns loose features, customer problems, and evidence into a ranked value proposition set per target persona.

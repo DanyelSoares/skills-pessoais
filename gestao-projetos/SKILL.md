@@ -1,6 +1,6 @@
 ---
 name: gestao-projetos
-description: "Project and portfolio management for multi-workstream programs: plans, status reports, risk registers, capacity, executive reporting. Use whenever the user asks how a project is tracking, what the risks are or who has capacity."
+description: "Gestão de projetos e portfólio com várias frentes: plano, termo de abertura, matriz RACI, relatórios de status, registro de riscos, capacidade da equipe e relatório executivo. Use ao perguntar como um projeto está, quais os riscos ou quem tem disponibilidade."
 ---
 
 # Senior Project Management Expert

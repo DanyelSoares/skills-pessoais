@@ -1,6 +1,6 @@
 ---
 name: doc-coauthoring
-description: Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.
+description: "Guia um fluxo estruturado para escrever documentos em conjunto: documentação, propostas, especificações técnicas, documentos de decisão (PIP, TAP, POP). Ajuda a passar o contexto, refinar em iterações e verificar se o texto funciona para o leitor. Use ao escrever ou revisar documentos estruturados."
 ---
 
 # Doc Co-Authoring Workflow

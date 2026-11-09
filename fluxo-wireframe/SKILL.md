@@ -1,6 +1,6 @@
 ---
 name: fluxo-wireframe
-description: "Sketches user flows and low-fidelity wireframes as text layouts and Mermaid diagrams before any visual design or code is written."
+description: "Desenha fluxos de usuário e wireframes de baixa fidelidade em texto e diagramas Mermaid, antes do design visual ou do código. Use para planejar cadastro, onboarding, checkout, solicitações ou telas de um sistema."
 ---
 
 This skill turns a feature idea into a reasoned user flow with low-fidelity wireframes before the design phase begins.

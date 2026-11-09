@@ -1,6 +1,6 @@
 ---
 name: modelagem-banco
-description: "Design a database schema: tables, relationships, indexes, normalization, SQL vs NoSQL, migration plans. Use whenever the user asks how to structure their data, which database to pick, or before writing DDL."
+description: "Projeta o esquema de banco de dados: tabelas, relacionamentos, índices, normalização, SQL × NoSQL e plano de migração. Use ao estruturar os dados de um sistema, escolher o banco ou antes de escrever o DDL."
 ---
 
 # Database Designer - POWERFUL Tier Skill

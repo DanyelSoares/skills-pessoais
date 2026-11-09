@@ -1,6 +1,6 @@
 ---
 name: github-actions-economia
-description: "Save GitHub Actions minutes and costs on CI/CD deploys. Always use this skill when a deploy is blocked with 'spending limit needs to be increased' or 'recent account payments have failed', when the Actions minutes are used up, when a deploy.yml / GitHub workflow is being built or optimized, when a budget/spending limit needs to be set up in the GitHub billing settings, or when someone asks 'why is my deploy not running', 'how do I save Actions minutes', 'what do I need to buy on GitHub'. Applies to every project with a GitHub Actions deploy (push to main, build, deploy)."
+description: "Economiza minutos e custos do GitHub Actions em deploys. Use quando um deploy for bloqueado com 'spending limit needs to be increased' ou 'recent account payments have failed', quando os minutos acabarem, ao criar ou otimizar um deploy.yml, ao configurar orçamento de billing no GitHub ou ao perguntar por que o deploy não rodou."
 ---
 
 # GitHub Actions: Saving Minutes & Costs

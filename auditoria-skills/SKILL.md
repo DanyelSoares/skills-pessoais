@@ -1,6 +1,6 @@
 ---
 name: auditoria-skills
-description: "Use before installing any skill or plugin from an untrusted source, or when asked if a skill is safe. Scans scripts, SKILL.md and dependencies for exfiltration, dangerous calls and prompt injection with skill_security_auditor.py."
+description: "Audita a segurança de uma skill ou plugin antes de instalar: verifica scripts, SKILL.md e dependências em busca de vazamento de dados, comandos perigosos e prompt injection. Use antes de incluir skills de terceiros ou ao perguntar se uma skill é segura."
 ---
 
 # Skill Security Auditor

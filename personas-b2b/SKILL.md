@@ -1,6 +1,6 @@
 ---
 name: personas-b2b
-description: "Distills CRM notes, interviews, and research data into evidence-based B2B personas. Activate on 'build personas from this data'."
+description: "Transforma anotações de CRM, entrevistas e pesquisas em personas B2B baseadas em evidências. Use ao pedir 'monte personas a partir destes dados'."
 ---
 
 This skill turns raw research and CRM data into B2B personas that marketing, sales, and product can actually act on.

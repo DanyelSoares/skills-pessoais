@@ -1,6 +1,6 @@
 ---
 name: analise-reunioes
-description: "Use when the user shares meeting transcripts (.vtt, .srt, .txt, Otter, Granola, Zoom) or asks how they come across in meetings. Measures speaking ratio, filler words and avoidance patterns and gives coaching."
+description: "Analisa transcrições de reuniões (.vtt, .srt, .txt, Zoom, Otter): proporção de fala, vícios de linguagem, padrões de evasão e dicas de melhoria. Use ao compartilhar uma transcrição ou perguntar como você se sai nas reuniões."
 ---
 
 # Meeting Insights Analyzer

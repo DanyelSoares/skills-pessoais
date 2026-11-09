@@ -1,6 +1,6 @@
 ---
 name: checklist-deploy
-description: "Use before deploying or going live ('am I ready to ship', 'can I deploy', 'preflight check'). Scans the codebase with ship_gate_scanner.py across security, database, deploy, AI, dependencies and observability, and blocks on critical items."
+description: "Checklist antes de publicar: varre o projeto em segurança, banco de dados, deploy, IA, dependências e monitoramento e bloqueia itens críticos. Use ao perguntar 'posso publicar?', 'está pronto para produção?' ou antes de um deploy."
 license: MIT
 metadata:
   author: Rajaraman Arumugam

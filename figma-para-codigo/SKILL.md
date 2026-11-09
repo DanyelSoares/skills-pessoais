@@ -1,6 +1,6 @@
 ---
 name: figma-para-codigo
-description: "Translates Figma frames, links, or screenshots into clean HTML/CSS or React code with a token system and semantic structure."
+description: "Converte frames, links ou prints do Figma em código HTML/CSS ou React limpo, com tokens de design e estrutura semântica. Use ao receber um design do Figma para implementar."
 ---
 
 This skill converts a Figma design into maintainable frontend code through a structured process instead of blind pixel tracing.

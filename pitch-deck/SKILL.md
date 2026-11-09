@@ -1,6 +1,6 @@
 ---
 name: pitch-deck
-description: "Structures B2B pitch decks for investors and executives and sharpens storyline, slides, and graphics."
+description: "Estrutura apresentações de pitch B2B para investidores e diretoria e melhora a narrativa, os slides e os gráficos. Use ao preparar um pitch, apresentar um projeto à diretoria ou revisar um deck."
 ---
 
 Turns raw material or a weak deck into a coherent pitch story with a slide plan and visual recommendations.

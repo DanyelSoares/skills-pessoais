@@ -1,6 +1,6 @@
 ---
 name: historias-usuario
-description: "Use for backlog work: writing user stories and acceptance criteria, splitting epics, estimating or prioritizing for a sprint. Generates stories with user_story_generator.py."
+description: "Trabalho de backlog: escreve histórias de usuário e critérios de aceite, quebra épicos, estima e prioriza para a sprint. Use ao escrever histórias de usuário (como no PIP) ou planejar uma sprint."
 metadata:
   not_for: Kanban-only workflows, waterfall project planning, general task management, non-Scrum agile frameworks (SAFe, LeSS) without adaptation
   triggers:

@@ -1,6 +1,6 @@
 ---
 name: mapeamento-processos
-description: "Use when documenting an end-to-end business process (procurement, onboarding, handoffs) and finding where work waits. Maps it with process_documenter.py, measures stages with cycle_time_analyzer.py and finds bottlenecks with bottleneck_detector.py."
+description: "Documenta um processo de ponta a ponta (processo atual × novo processo), mede o tempo de cada etapa e encontra gargalos e esperas. Use ao mapear, redesenhar ou melhorar um processo de negócio."
 license: MIT
 metadata:
   version: 2.8.0

@@ -1,6 +1,6 @@
 ---
 name: pops-runbooks
-description: "Use when writing, checking or cleaning up SOPs and runbooks. Generates them with sop_generator.py, checks 5W2H completeness and links with runbook_validator.py and ingests an existing knowledge base with kb_ingester.py."
+description: "Escreve, revisa e organiza POPs (procedimentos operacionais padrão) e runbooks: gera no formato 5W2H, verifica se estão completos e importa uma base de conhecimento existente. Use ao criar ou revisar POPs e procedimentos."
 context: fork
 license: MIT
 metadata:
