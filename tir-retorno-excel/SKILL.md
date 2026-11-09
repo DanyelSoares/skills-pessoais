@@ -22,7 +22,7 @@ Use when someone needs a general returns engine for a dated investment cash-flow
 4. Build the Sensitivity grid with a data-table style of recomputed IRR.
 5. Wire Checks to TRUE/FALSE tests.
 6. Apply number formats and the color convention.
-7. Recalculate the workbook headless so all formulas compute.
+7. Recalculate the workbook in Microsoft Excel with `scripts/recalc_excel.py` so all formulas compute.
 8. Verify zero formula errors (#REF!, #DIV/0!, #VALUE!, #NAME?), fix in a loop, then deliver.
 
 ## Tab-by-tab spec
@@ -75,6 +75,12 @@ Blue font for inputs (cash flows, fee and carry rates, sensitivity axes). Black 
 - Sensitivity anchor matches base: `=ROUND(grid_base_cell - Returns!XIRR_cell,4)=0`.
 
 ## Recalculate and verify
+
+> **Ambiente padrão: Windows com Microsoft Excel.** Recalcule no próprio Excel, não no LibreOffice:
+> `python scripts/recalc_excel.py <arquivo.xlsx>` (requer `pip install pywin32 openpyxl`). O script abre o arquivo no Excel
+> invisível, faz o recálculo completo (incluindo Tabelas de Dados `=TABLE()`, RAND e XIRR), salva e lista qualquer erro de fórmula.
+> Repita até sair "OK". Use LibreOffice headless apenas se o Excel não estiver disponível.
+
 After writing, recompute headless so IRR, XIRR, and every sensitivity cell resolve. Scan all cells for #REF!, #DIV/0!, #VALUE!, #NAME?. The most common failure is XIRR returning #NUM! when no guess is given or when signs are all one direction; supply the 0.1 guess and confirm the sign-sanity check passes. MOIC #DIV/0! means outflows are zero; trace and fix. Recalc until clean, then deliver.
 
 ## Inputs to gather

@@ -25,7 +25,7 @@ A workbook with six tabs:
 5. Add a revenue and contribution row beneath the retention grid per cohort.
 6. Build LTV two ways on LTV-CAC: closed-form and discounted cohort sum; compute the ratio and payback.
 7. Build the Checks tab with consistency, monotonicity, and payback tests.
-8. Recalculate the workbook headless (LibreOffice) so all formulas compute.
+8. Recalculate the workbook in Microsoft Excel with `scripts/recalc_excel.py` so all formulas compute.
 9. Verify zero formula errors (#REF!, #DIV/0!, #VALUE!, #NAME?); fix and re-recalculate in a loop, then deliver.
 
 ## Tab-by-tab spec
@@ -86,6 +86,12 @@ A workbook with six tabs:
 - Margins and retention between 0 and 1; CAC and LTV non-negative.
 
 ## Recalculate and verify
+
+> **Ambiente padrão: Windows com Microsoft Excel.** Recalcule no próprio Excel, não no LibreOffice:
+> `python scripts/recalc_excel.py <arquivo.xlsx>` (requer `pip install pywin32 openpyxl`). O script abre o arquivo no Excel
+> invisível, faz o recálculo completo (incluindo Tabelas de Dados `=TABLE()`, RAND e XIRR), salva e lista qualquer erro de fórmula.
+> Repita até sair "OK". Use LibreOffice headless apenas se o Excel não estiver disponível.
+
 After writing, recalculate headless with LibreOffice so openpyxl formula text becomes computed values. Scan every sheet for #REF!, #DIV/0!, #VALUE!, #NAME?. Note that LTV and payback divide by churn, so guard against churn = 0 producing #DIV/0!. Fix any offending formula or missing named range and recalculate again in a loop. Deliver only when the Checks tab shows all PASS and no error strings remain.
 
 ## Inputs to gather

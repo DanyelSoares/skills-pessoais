@@ -18,7 +18,7 @@ Five areas: a `Cover` tab (selector and summary), a `Scenario Inputs` tab (each 
 4. Rewrite each model assumption cell to pull the active case via CHOOSE or INDEX referencing the selector.
 5. Build the `Outputs` tab comparing key results across all three cases (parallel calc, see spec) so all cases show at once regardless of selector.
 6. Add the `Checks` tab.
-7. Recalculate the workbook in a real engine (headless LibreOffice).
+7. Recalculate the workbook in Microsoft Excel with `scripts/recalc_excel.py` (LibreOffice headless only as a fallback).
 8. Verify zero formula errors (#REF!, #DIV/0!, #VALUE!, #NAME?), confirm checks pass, then deliver the .xlsx.
 
 ## Tab-by-tab spec
@@ -76,6 +76,12 @@ Excel's built-in Scenario Manager stores case values inside a dialog, invisible 
 See the Checks tab above: selector in 1..3 and integer, no blank case cells, active value equals the selector's case. All three must return TRUE.
 
 ## Recalculate and verify
+
+> **Ambiente padrão: Windows com Microsoft Excel.** Recalcule no próprio Excel, não no LibreOffice:
+> `python scripts/recalc_excel.py <arquivo.xlsx>` (requer `pip install pywin32 openpyxl`). O script abre o arquivo no Excel
+> invisível, faz o recálculo completo (incluindo Tabelas de Dados `=TABLE()`, RAND e XIRR), salva e lista qualquer erro de fórmula.
+> Repita até sair "OK". Use LibreOffice headless apenas se o Excel não estiver disponível.
+
 Save with openpyxl, recalc headless (for example `libreoffice --headless --convert-to xlsx`) so CHOOSE/INDEX and cross-sheet links resolve. Reload, scan for #REF!, #DIV/0!, #VALUE!, #NAME?. Toggle the selector to 1, 2, 3 and confirm outputs change and the active check holds at each setting. Fix and loop until clean, then deliver.
 
 ## Inputs to gather

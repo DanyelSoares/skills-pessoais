@@ -19,7 +19,7 @@ A single `Sensitivity` tab that attaches to an existing model. It references the
 5. ALSO build the code-computed grid as a robust fallback: re-evaluate the model in Python across every input combination and write the resulting values as a labeled matrix.
 6. Apply a 3-color scale to the result block and label both axes with the input cell names.
 7. Add the Checks block.
-8. Recalculate the workbook in a real engine (headless LibreOffice).
+8. Recalculate the workbook in Microsoft Excel with `scripts/recalc_excel.py` (LibreOffice headless only as a fallback).
 9. Verify zero formula errors (#REF!, #DIV/0!, #VALUE!, #NAME?), confirm the checks pass, then deliver the .xlsx.
 
 ## Tab-by-tab spec
@@ -72,6 +72,12 @@ Code-computed fallback for the same block (recommended when generating via code)
 - For the computed fallback, the cell at the base inputs equals the native Data Table cell at the same inputs (within rounding).
 
 ## Recalculate and verify
+
+> **Ambiente padrão: Windows com Microsoft Excel.** Recalcule no próprio Excel, não no LibreOffice:
+> `python scripts/recalc_excel.py <arquivo.xlsx>` (requer `pip install pywin32 openpyxl`). O script abre o arquivo no Excel
+> invisível, faz o recálculo completo (incluindo Tabelas de Dados `=TABLE()`, RAND e XIRR), salva e lista qualquer erro de fórmula.
+> Repita até sair "OK". Use LibreOffice headless apenas se o Excel não estiver disponível.
+
 Save with openpyxl, then recalc headless (for example `libreoffice --headless --convert-to xlsx`) so `=TABLE(...)` and cross-sheet links populate. Reload and scan every cell for #REF!, #DIV/0!, #VALUE!, #NAME?. Confirm the three checks return TRUE. If any error or FALSE appears, fix the reference or range and loop until clean, then deliver.
 
 ## Inputs to gather

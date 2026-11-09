@@ -19,7 +19,7 @@ Five tabs: `Cover` (run settings and summary), `Assumptions` (each uncertain inp
 5. Compute the percentile summary (P5, P10, P50, P90, P95), mean, standard deviation, and at least one threshold probability such as P(IRR < hurdle).
 6. Build a histogram chart of the trial outputs.
 7. Add the Checks tab.
-8. Recalculate the workbook in a real engine (headless LibreOffice).
+8. Recalculate the workbook in Microsoft Excel with `scripts/recalc_excel.py` (LibreOffice headless only as a fallback).
 9. Verify zero formula errors (#REF!, #DIV/0!, #VALUE!, #NAME?), confirm checks pass, then deliver the .xlsx.
 
 ## Tab-by-tab spec
@@ -81,6 +81,12 @@ One row per uncertain input: name, distribution type, and parameter cells (all b
 See the Checks tab: trial count stated and matches the data, all summary stats present, percentiles monotonic, histogram present. All must hold.
 
 ## Recalculate and verify
+
+> **Ambiente padrão: Windows com Microsoft Excel.** Recalcule no próprio Excel, não no LibreOffice:
+> `python scripts/recalc_excel.py <arquivo.xlsx>` (requer `pip install pywin32 openpyxl`). O script abre o arquivo no Excel
+> invisível, faz o recálculo completo (incluindo Tabelas de Dados `=TABLE()`, RAND e XIRR), salva e lista qualquer erro de fórmula.
+> Repita até sair "OK". Use LibreOffice headless apenas se o Excel não estiver disponível.
+
 Save with openpyxl, recalc headless (for example `libreoffice --headless --convert-to xlsx`) so `{=TABLE(...)}`, NORM.INV, RAND, and the percentile formulas populate. Reload, scan for #REF!, #DIV/0!, #VALUE!, #NAME?. For the native path, confirm the trial column shows varied values (not a repeated constant, which means the scratch cell was wrong). Confirm percentiles are monotonic and the histogram rendered. Fix and loop until clean, then deliver.
 
 ## Inputs to gather

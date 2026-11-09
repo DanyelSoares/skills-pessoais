@@ -26,7 +26,7 @@ A workbook with six tabs:
 6. Build the Tiers tab: per-tier price, volume, margin, and a mix-weighted blended contribution.
 7. Build the Sensitivity tab as a native two-variable Data Table (price by elasticity).
 8. Build the Checks tab with non-negativity, peak, and margin tests.
-9. Recalculate the workbook headless (LibreOffice) so all formulas compute.
+9. Recalculate the workbook in Microsoft Excel with `scripts/recalc_excel.py` so all formulas compute.
 10. Verify zero formula errors (#REF!, #DIV/0!, #VALUE!, #NAME?); fix and re-recalculate in a loop, then deliver.
 
 ## Tab-by-tab spec
@@ -84,6 +84,12 @@ A workbook with six tabs:
 - Tier mix sums to 100%; elasticity is negative.
 
 ## Recalculate and verify
+
+> **Ambiente padrão: Windows com Microsoft Excel.** Recalcule no próprio Excel, não no LibreOffice:
+> `python scripts/recalc_excel.py <arquivo.xlsx>` (requer `pip install pywin32 openpyxl`). O script abre o arquivo no Excel
+> invisível, faz o recálculo completo (incluindo Tabelas de Dados `=TABLE()`, RAND e XIRR), salva e lista qualquer erro de fórmula.
+> Repita até sair "OK". Use LibreOffice headless apenas se o Excel não estiver disponível.
+
 After writing, recalculate headless with LibreOffice so openpyxl formula text becomes computed values. Scan every sheet for #REF!, #DIV/0!, #VALUE!, #NAME?. The power form `(price/P0)^elasticity` can misbehave if P0 is zero, so guard reference price as a positive blue input. Fix any offending formula or missing named range and recalculate again in a loop. Deliver only when the Checks tab shows all PASS and no error strings remain.
 
 ## Inputs to gather
